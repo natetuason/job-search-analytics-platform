@@ -1,0 +1,40 @@
+# Community job lists published as files in public GitHub repos.
+# Only raw.githubusercontent.com files are fetched; the list owners' websites are not
+# (Simplify, newgrad.ai, Welcome to the Jungle and Boardsweep prohibit automated access
+# in their terms).
+#
+#   name:       label shown in run output
+#   format:     simplify_json | markdown_table
+#   url:        raw file URL
+#   categories: optional (simplify_json only). Keep only these listing categories.
+#
+# Lists are non-authoritative: they fill gaps on jobs found elsewhere and never
+# mark a job expired because a row disappeared.
+
+lists:
+  # SimplifyJobs/New-Grad-Positions: structured, links go straight to the employer.
+  # Categories seen 2026-11-05: Software, AI/ML/Data, Hardware, Product, Quant.
+  - name: Simplify new grad
+    format: simplify_json
+    url: https://raw.githubusercontent.com/SimplifyJobs/New-Grad-Positions/dev/.github/scripts/listings.json
+    categories: [AI/ML/Data, "Data Science, AI & Machine Learning", Product, Quant]
+
+  # jobright-ai/2026-Business-Analyst-New-Grad: last 7 days only. Links open the job
+  # on jobright.ai (the app doesn't fetch those pages), not the employer's site.
+  - name: Jobright business analyst new grad
+    format: markdown_table
+    url: https://raw.githubusercontent.com/jobright-ai/2026-Business-Analyst-New-Grad/master/README.md
+
+  - name: Jobright product management new grad
+    format: markdown_table
+    url: https://raw.githubusercontent.com/jobright-ai/2026-Product-Management-New-Grad/master/README.md
+
+  # jobs-jobr-pro lists: not new-grad specific (many senior and non-U.S. roles; scoring
+  # filters them). Links open the job on jobr.pro, not the employer's site.
+  - name: jobr.pro product management
+    format: markdown_table
+    url: https://raw.githubusercontent.com/jobs-jobr-pro/Product-Management-Jobs/main/README.md
+
+  - name: jobr.pro data analyst
+    format: markdown_table
+    url: https://raw.githubusercontent.com/jobs-jobr-pro/Data-Analyst-Jobs/main/README.md

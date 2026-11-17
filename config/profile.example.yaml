@@ -1,0 +1,24 @@
+# Template for YOUR skills file. Copy it to data/private/profile.yaml (git-ignored) and edit:
+#
+#   cp config/profile.example.yaml data/private/profile.yaml
+#
+# Rules:
+# - Only list what your résumé actually shows. The scorer trusts this file.
+# - Skill names must match a name in config/skills.yaml (add new skills there first if needed).
+# - level: strong (you've used it for real work) or moderate (coursework, light use).
+# - evidence: a few words pointing to where on your résumé it shows. Only you read this.
+# - experiences: each job, internship or project, and the skills it used. The job page uses these to say
+#   which of your experiences best supports an application.
+
+skills:
+  SQL:            { level: strong,   evidence: "internship: weekly reporting queries" }
+  Excel:          { level: strong,   evidence: "internship + coursework models" }
+  Python:         { level: moderate, evidence: "class projects" }
+  Tableau:        { level: moderate, evidence: "personal dashboard project" }
+  Stakeholder management: { level: strong, evidence: "gathered requirements from 2 teams" }
+
+experiences:
+  - name: Example Co, Analyst Intern (2025)
+    skills: [SQL, Excel, Stakeholder management]
+  - name: Class project, sales forecasting
+    skills: [Python, Tableau]

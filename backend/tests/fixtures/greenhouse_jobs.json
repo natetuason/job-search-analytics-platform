@@ -1,0 +1,38 @@
+{
+  "jobs": [
+    {
+      "id": 7001,
+      "title": "Business Intelligence Analyst",
+      "absolute_url": "https://boards.greenhouse.io/acme/jobs/7001?gh_src=abc123",
+      "company_name": "Acme Inc.",
+      "location": {"name": "New York, NY"},
+      "first_published": "2026-10-20T09:00:00-04:00",
+      "updated_at": "2026-10-28T10:00:00-04:00",
+      "application_deadline": "2026-12-01T00:00:00-05:00",
+      "content": "&lt;p&gt;We are looking for a &lt;strong&gt;BI Analyst&lt;/strong&gt;. This role is hybrid.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;SQL&lt;/li&gt;&lt;li&gt;Tableau&lt;/li&gt;&lt;/ul&gt;",
+      "metadata": []
+    },
+    {
+      "id": 7002,
+      "title": "Sr. Data Analyst - Remote",
+      "absolute_url": "https://careers.acme.com/positions/7002?gh_jid=7002&utm_source=x",
+      "company_name": "Acme Inc.",
+      "location": {"name": "Remote - US"},
+      "first_published": null,
+      "updated_at": "2026-10-25T12:00:00Z",
+      "application_deadline": null,
+      "content": "&lt;p&gt;Remote role.&lt;/p&gt;"
+    },
+    {
+      "id": 7003,
+      "title": "Supply Chain Analyst Intern",
+      "absolute_url": "https://boards.greenhouse.io/acme/jobs/7003",
+      "company_name": "Acme Inc.",
+      "location": {"name": "Chicago, Illinois, United States"},
+      "first_published": "2026-10-01T09:00:00Z",
+      "updated_at": "2026-10-01T09:00:00Z",
+      "content": ""
+    }
+  ],
+  "meta": {"total": 3}
+}

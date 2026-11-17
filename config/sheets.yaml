@@ -1,0 +1,18 @@
+# Google Sheets job lists to import. Only sheets that are public or shared as
+# "anyone with the link can view" work; private sheets are reported, not bypassed.
+#
+#   name:    label shown in run output
+#   url:     the sheet's normal URL (include #gid=... to pick a tab; default is the first tab)
+#   columns: optional. Map fields to the sheet's header names when auto-detection
+#            guesses wrong. Fields: company, title, location, link, posted, salary,
+#            deadline, notes. company and title are required (detected or mapped).
+#
+# Note: CSV export keeps only cell text. If a sheet hides URLs behind link text
+# ("Apply"), those rows are skipped and listed in the run output.
+#
+# Example:
+#   - name: New grad analyst list
+#     url: https://docs.google.com/spreadsheets/d/<sheet-id>/edit#gid=0
+#     columns: { company: Company, title: Role, link: Application Link }
+
+sheets: []

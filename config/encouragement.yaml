@@ -1,0 +1,15 @@
+# Lines shown at the top of the web app, one at random per visit (click it for another).
+# Personal lines (mentioning your own employers, school, ...) go in data/private/encouragement.yaml
+# (git-ignored, same format); they're added to these.
+lines:
+  - "Pressure is a privilege. You're only feeling it because you're in the arena."
+  - "Every no brings you closer to a yes."
+  - "Your value isn't decided by an application. You're that guy."
+  - "Rejection is redirection. Keep moving."
+  - "One thoughtful application beats ten rushed ones."
+  - "You built the résumé. Now go let it work for you."
+  - "Consistency compounds. Apply today, thank yourself later."
+  - "They're not saying no to you. They're saying not this one."
+  - "Bet on yourself. You've been right about you before."
+  - "Doors open for people who keep knocking."
+  - "Small steps every day. That's the whole secret."

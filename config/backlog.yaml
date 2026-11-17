@@ -1,0 +1,82 @@
+# Application backlog (backlog/applications.md, .csv, rollup.md): how postings are read.
+# Patterns are case-insensitive regexes matched on word boundaries. Skills themselves come from config/skills.yaml.
+# Your own facts for gap scoring live in data/private/backlog_me.yaml (see backlog_me.example.yaml).
+
+# First match on the job title wins; anything else is "other".
+role_families:
+  rotational program: ['rotational', 'rotation', 'leadership (?:development )?program', 'development program']
+  product/APM: ['product manager', 'associate product', '\bapm\b', 'product owner', 'product design']
+  consulting: ['consultant', 'consulting', 'solution consultant', 'advisory']
+  risk/compliance: ['risk', 'compliance', 'controls?', 'audit', 'oversight', 'fraud', 'aml', 'kyc']
+  supply chain/logistics: ['supply chain', 'logistics', 'procurement', 'procure-to-pay', 'demand plann\w*', 'inventory', 'strategic sourcing', 'fulfillment']
+  strategy/ops/growth: ['strategy', 'operations', 'ops', 'growth', 'commercial', 'finance', 'fp&a']
+  data/business analyst: ['analyst', 'analytics', 'data', 'business intelligence', 'insights']
+
+# Skills from config/skills.yaml that are tools (software you'd list by name); everything else counts as a technical skill.
+tools: [SQL, Snowflake, Python, R, Java, Tableau, QuickSight, Power BI, Excel, PowerPoint, Word, Jira, SAP, Looker, dbt,
+        Spark, Airflow, Cloud platforms, Databricks, Alteryx, VBA, SAS, Salesforce, Oracle/NetSuite,
+        Supply planning software, Product analytics tools, Git]
+
+soft_skills:
+  Communication: ['communicat\w*', 'written and verbal', 'verbal and written', 'articulate']
+  Collaboration: ['collaborat\w*', 'teamwork', 'team player', 'one team']
+  Ownership: ['ownership', 'self-starter', 'proactive', 'take responsibility', 'independen\w*', 'autonom\w*', 'initiative']
+  Curiosity / learning: ['curious', 'curiosity', 'eager to learn', 'passion for learning', 'growth mindset', 'learn quickly', 'learn a lot']
+  Problem solving: ['problem[- ]solv\w*', 'solve problems', 'business problems', 'structured thinking', 'first principles']
+  Analytical thinking: ['analytical mindset', 'analytical skills', 'critical thinking', 'head for numbers', 'quantitative skills', 'numerical skills']
+  Attention to detail: ['attention to detail', 'detail[- ]oriented', 'accuracy', 'meticulous']
+  Ambiguity / fast pace: ['ambigu\w*', 'fast[- ]paced', 'dynamic environment', 'comfortable with change']
+  Leadership: ['lead(?:ing)? (?:\w+ ){0,2}(?:teams?|projects?|initiatives?|groups?)', 'leadership (?:skills|experience|abilit\w*)', 'influence', 'mentor\w*']
+  Stakeholder influence: ['influenc\w* (?:stakeholders|without authority)', 'executive presence', 'senior leadership']
+  Prioritization: ['prioriti[sz]\w*', 'multiple projects', 'multi-?task\w*', 'time management', 'competing priorities']
+  Integrity: ['integrity', 'low ego', 'humility', 'trustworth\w*']
+  Customer focus: ['customer[- ](?:focus\w*|obsess\w*|centric)', 'client[- ]facing', 'customer[- ]facing']
+
+experience_types:
+  internships: ['internships?', 'co-?ops?']
+  projects: ['projects?', 'portfolio']
+  coursework: ['coursework', 'course ?work', 'classes', 'academic']
+  leadership: ['leadership', 'student organi[sz]ations?', 'clubs?', 'extracurricular']
+  research: ['research experience', 'thesis']
+  competitions: ['case competitions?', 'hackathons?']
+  full-time work: ['work experience', 'professional experience', 'years of (?:relevant )?experience', 'full[- ]time experience']
+
+application_requirements:
+  Cover letter: ['cover letter']
+  Assessment: ['online assessments?', 'complete an? (?:\w+ )?assessment', 'online test', 'aptitude test', 'hackerrank', 'codesignal']
+  Case study: ['case (?:study|interview|exercise)', 'take[- ]home']
+  Short answers: ['short answers?', 'written questions', 'essay', 'supplemental questions', 'application questions']
+  Video interview: ['video interview', 'hirevue', 'recorded interview']
+  Transcript: ['transcripts?']
+  Portfolio: ['portfolio (?:of (?:your )?work|link|website)', 'link to your portfolio']
+  References: ['professional references']
+
+application_limits: ['apply to (?:up to|no more than|a maximum of) \w+', 'only (?:be considered for|apply to) one', 'one application',
+                     'limit(?:ed)? (?:of )?\w+ applications?', 'applications? (?:are|is) limited', 'may only apply']
+
+certifications: ['cpa', 'cfa', 'pmp', 'capm', 'six sigma', 'lean six sigma', 'apics', 'cscp', 'cpim', 'aws certified',
+                 'google analytics certification', 'tableau (?:desktop )?specialist', 'scrum master', 'csm', 'series \d+', 'sie']
+
+# Cheapest way to close a gap: one small, real project or course. Edit freely; personal ones go in
+# data/private/backlog_me.yaml under gap_fixes (they win). Skills not listed get a generic suggestion.
+gap_fixes:
+  Looker: "Free Looker Studio dashboard on a public dataset (a weekend)"
+  dbt: "dbt Fundamentals (free course) + model one dataset in the job board's Postgres"
+  Spark: "Databricks Community Edition notebook: aggregate a large public dataset with PySpark"
+  Airflow: "Schedule one small pipeline with Airflow in Docker (reuse the job board's scheduler idea)"
+  Cloud platforms: "AWS/GCP free tier: load a CSV to cloud storage and query it (BigQuery sandbox is free)"
+  Databricks: "Databricks Community Edition (free): one notebook project"
+  Machine learning: "One scikit-learn project (e.g. predict whether a posting gets Apply) written up on GitHub"
+  A/B testing: "Analyze a public A/B test dataset; write up power, significance and the decision"
+  Alteryx: "Alteryx free trial + their free Foundational Micro-Credential"
+  VBA: "Automate one Excel report with a VBA macro"
+  SAS: "SAS OnDemand for Academics (free with .edu)"
+  Salesforce: "Trailhead (free): Admin Beginner trail badges"
+  Oracle/NetSuite: "Mention SAP ERP experience as transferable; skim NetSuite's free training"
+  Supply planning software: "Kinaxis/o9 free intros; frame SAP + Demand Planning coursework"
+  Product analytics tools: "Amplitude or Mixpanel free plan: instrument a tiny app or use their demo data"
+  Git: "Push the job board (shareable copy) to public GitHub with a README"
+  Accounting: "Free intro accounting course (e.g. Coursera audit) + one 3-statement model"
+  Statistics: "Restate coursework on the resume with one applied stats project"
+  Financial modeling: "Build one 3-statement / DCF model from a public 10-K"
+  Agile: "Name sprint-based work from an internship explicitly on the resume"

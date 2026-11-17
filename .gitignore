@@ -1,0 +1,40 @@
+# Secrets and private data — never commit
+.env
+.env.*
+!.env.example
+data/private/
+backlog/
+analysis/
+ResumeProject.md
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+frontend/next-env.d.ts
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Stray R session files
+.Rhistory
+.RData
+
+# Logs
+*.log

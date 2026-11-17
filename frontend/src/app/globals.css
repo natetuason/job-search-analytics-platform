@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@custom-variant dark (@media (prefers-color-scheme: dark));
+
+/*
+  Palette: warm cream neutrals + pine (sage/forest) accent.
+  The neutrals replace Tailwind's zinc scale, so every zinc-* class in the app picks them up.
+  To change the look, edit these two scales.
+*/
+@theme {
+  --color-zinc-50: #f8f6f0;
+  --color-zinc-100: #efece2;
+  --color-zinc-200: #e3dfd1;
+  --color-zinc-300: #cdc8b6;
+  --color-zinc-400: #a5a08c;
+  --color-zinc-500: #7c7867;
+  --color-zinc-600: #5f5c4e;
+  --color-zinc-700: #48473c;
+  --color-zinc-800: #2f302a;
+  --color-zinc-900: #20221d;
+  --color-zinc-950: #151713;
+
+  --color-pine-50: #eef5f0;
+  --color-pine-100: #d6e8dc;
+  --color-pine-200: #b0d2bd;
+  --color-pine-300: #84b69a;
+  --color-pine-400: #5b9879;
+  --color-pine-500: #3f7d60;
+  --color-pine-600: #2f654d;
+  --color-pine-700: #26513f;
+  --color-pine-800: #1f4134;
+  --color-pine-900: #19352b;
+  --color-pine-950: #0f221b;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-fraunces);
+}
+
+body {
+  @apply bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100;
+}

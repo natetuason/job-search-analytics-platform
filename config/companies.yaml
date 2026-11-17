@@ -1,0 +1,122 @@
+# Company job boards to fetch. Edit freely.
+#   name:  display name (Lever doesn't return one, so it's required there)
+#   ats:   greenhouse | lever | ashby
+#   token: the board slug, e.g. boards.greenhouse.io/<token>, jobs.lever.co/<token>, jobs.ashbyhq.com/<token>
+#
+# Every board below was checked against the live public API on 2026-11-03 and
+# had at least one posting with "analyst" in the title. Add companies you care
+# about; a wrong token just records a failed run (HTTP 404) and moves on.
+
+companies:
+  # Fintech / finance
+  - { name: Stripe,      ats: greenhouse, token: stripe }
+  - { name: Robinhood,   ats: greenhouse, token: robinhood }
+  - { name: Coinbase,    ats: greenhouse, token: coinbase }
+  - { name: Affirm,      ats: greenhouse, token: affirm }
+  - { name: Brex,        ats: greenhouse, token: brex }
+  - { name: Chime,       ats: greenhouse, token: chime }
+  - { name: Betterment,  ats: greenhouse, token: betterment }
+  - { name: Point72,     ats: greenhouse, token: point72 }
+  - { name: Jane Street, ats: greenhouse, token: janestreet }
+  - { name: Wealthfront, ats: lever,      token: wealthfront }
+
+  # Tech / marketplaces
+  - { name: Airbnb,      ats: greenhouse, token: airbnb }
+  - { name: DoorDash,    ats: greenhouse, token: doordashusa }
+  - { name: Instacart,   ats: greenhouse, token: instacart }
+  - { name: Lyft,        ats: greenhouse, token: lyft }
+  - { name: Figma,       ats: greenhouse, token: figma }
+  - { name: Pinterest,   ats: greenhouse, token: pinterest }
+  - { name: Reddit,      ats: greenhouse, token: reddit }
+  - { name: Squarespace, ats: greenhouse, token: squarespace }
+  - { name: Peloton,     ats: greenhouse, token: peloton }
+  - { name: Spotify,     ats: lever,      token: spotify }
+  - { name: Palantir,    ats: lever,      token: palantir }
+
+  # Enterprise software / data
+  - { name: Datadog,     ats: greenhouse, token: datadog }
+  - { name: MongoDB,     ats: greenhouse, token: mongodb }
+  - { name: Elastic,     ats: greenhouse, token: elastic }
+  - { name: Twilio,      ats: greenhouse, token: twilio }
+  - { name: Okta,        ats: greenhouse, token: okta }
+  - { name: Samsara,     ats: greenhouse, token: samsara }
+  - { name: Toast,       ats: greenhouse, token: toast }
+  - { name: Gusto,       ats: greenhouse, token: gusto }
+  - { name: Justworks,   ats: greenhouse, token: justworks }
+  - { name: Veeva,       ats: lever,      token: veeva }
+
+  # Logistics / supply chain
+  - { name: Flexport,    ats: greenhouse, token: flexport }
+
+  # Health
+  - { name: Oscar Health, ats: greenhouse, token: oscar }
+  - { name: Ro,           ats: lever,      token: ro }
+  - { name: CLEAR,        ats: greenhouse, token: clear }
+
+  # Added 2026-11-05 from a scan of NY/NJ-relevant employers on public ATS APIs.
+  # Each board's name was checked and has NY/NJ postings (count in comment).
+  # Fintech / trading
+  - { name: Mercury,         ats: greenhouse, token: mercury }        # 73
+  - { name: SoFi,            ats: greenhouse, token: sofi }           # 11
+  - { name: Carta,           ats: greenhouse, token: carta }          # 29
+  - { name: Jump Trading,    ats: greenhouse, token: jumptrading }    # 16
+  - { name: Virtu Financial, ats: greenhouse, token: virtu }          # 14
+  - { name: Flow Traders,    ats: greenhouse, token: flowtraders }    # 11
+  - { name: IMC,             ats: greenhouse, token: imc }            # 15
+  - { name: Payoneer,        ats: greenhouse, token: payoneer }       # 3
+  - { name: Gemini,          ats: greenhouse, token: gemini }         # 25
+  - { name: Alloy,           ats: greenhouse, token: alloy }          # 21
+  - { name: Block,           ats: greenhouse, token: block }          # 21
+  - { name: Public,          ats: greenhouse, token: public }         # 3
+  - { name: Plaid,           ats: ashby,      token: plaid }          # 48
+  - { name: Paxos,           ats: ashby,      token: paxos }          # 7
+  - { name: Socure,          ats: ashby,      token: socure }         # 16
+  - { name: Ocrolus,         ats: ashby,      token: ocrolus }        # 2
+  - { name: NerdWallet,      ats: ashby,      token: nerdwallet }     # 5
+  - { name: Titan,           ats: ashby,      token: titan }          # 12
+  - { name: Lemonade,        ats: ashby,      token: lemonade }       # 5
+  # Consumer / retail / food
+  - { name: Glossier,        ats: greenhouse, token: glossier }       # 9
+  - { name: Rent the Runway, ats: greenhouse, token: renttherunway }  # 5
+  - { name: Harry's,         ats: greenhouse, token: harrys }         # 11
+  - { name: SeatGeek,        ats: greenhouse, token: seatgeek }       # 23
+  - { name: FanDuel,         ats: greenhouse, token: fanduel }        # 56
+  - { name: Faire,           ats: greenhouse, token: faire }          # 25
+  - { name: Misfits Market,  ats: greenhouse, token: misfitsmarket }  # 2
+  - { name: Quince,          ats: greenhouse, token: quince }         # 8
+  - { name: StockX,          ats: greenhouse, token: stockx }         # 3
+  - { name: Sweetgreen,      ats: greenhouse, token: sweetgreen }     # 6
+  - { name: HelloFresh,      ats: greenhouse, token: hellofresh }     # 41
+  - { name: Oura,            ats: greenhouse, token: oura }           # 3
+  - { name: Away,            ats: ashby,      token: away }           # 7
+  - { name: Rothy's,         ats: ashby,      token: rothys }         # 12
+  # Health
+  - { name: Zocdoc,          ats: greenhouse, token: zocdoc }         # 43
+  - { name: Talkspace,       ats: greenhouse, token: talkspace }      # 16
+  - { name: Clover Health,   ats: greenhouse, token: cloverhealth }   # 13
+  - { name: Nayya,           ats: greenhouse, token: nayya }          # 3
+  - { name: Headway,         ats: ashby,      token: headway }        # 27
+  # Media / adtech / software / AI
+  - { name: Braze,           ats: greenhouse, token: braze }          # 77
+  - { name: Taboola,         ats: greenhouse, token: taboola }        # 13
+  - { name: Yext,            ats: greenhouse, token: yext }           # 7
+  - { name: Attentive,       ats: greenhouse, token: attentive }      # 19
+  - { name: Vox Media,       ats: greenhouse, token: voxmedia }       # 18
+  - { name: Hearst,          ats: greenhouse, token: hearst }         # 56
+  - { name: Asana,           ats: greenhouse, token: asana }          # 5
+  - { name: Scale AI,        ats: greenhouse, token: scaleai }        # 63
+  - { name: Anthropic,       ats: greenhouse, token: anthropic }      # 362
+  - { name: Databricks,      ats: greenhouse, token: databricks }     # 59
+  - { name: Celonis,         ats: greenhouse, token: celonis }        # 29 (process mining; SAP-adjacent)
+  - { name: Verkada,         ats: greenhouse, token: verkada }        # 17
+  - { name: AlphaSense,      ats: greenhouse, token: alphasense }     # 34
+  - { name: Cockroach Labs,  ats: greenhouse, token: cockroachlabs }  # 4
+  - { name: Olo,             ats: lever,      token: olo }            # 2
+  - { name: Notion,          ats: ashby,      token: notion }         # 15
+  - { name: OpenAI,          ats: ashby,      token: openai }         # 25
+  - { name: Snowflake,       ats: ashby,      token: snowflake }      # 14
+  - { name: Cohere,          ats: ashby,      token: cohere }         # 9
+  - { name: UiPath,          ats: ashby,      token: uipath }         # 6
+  # Logistics / supply chain (few NY/NJ roles; big-city and remote roles still count)
+  - { name: project44,       ats: greenhouse, token: project44 }
+  - { name: FourKites,       ats: greenhouse, token: fourkites }

@@ -1,0 +1,15 @@
+# Copy to data/private/backlog_me.yaml and fill in from your own résumé. Used only for the fit/gap columns of the
+# application backlog. Your skills come from data/private/profile.yaml; add any extra ones here.
+school: ""
+majors: []
+gpa: null
+graduation: ""          # e.g. "May 2027"
+home: ""                # where you're based
+full_time_years: 0      # full-time experience (internships are listed separately)
+extra_skills: []        # canonical names from config/skills.yaml not already in profile.yaml
+internships: []
+projects: []
+leadership: []
+coursework: []
+certifications: []
+gap_fixes: {}         # your own cheapest-fix notes, e.g. {Agile: "..."}; override config/backlog.yaml

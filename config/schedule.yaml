@@ -1,0 +1,16 @@
+# Scheduled updates (the `worker` service, or "Update now" on the Dashboard).
+# How often it runs is the "search frequency" in Settings (default every 24 hours).
+
+# Each update fetches every source in companies.yaml, sheets.yaml and lists.yaml, closes listings that are gone,
+# rescores, and records what's new. Adzuna costs money per call, so it's only included when this is true
+# (the caps in adzuna.yaml still apply).
+run_adzuna: false
+
+# Closing listings that came only from a list, sheet or Adzuna (employer boards close their own postings).
+# A job closes when every source it came from has stopped listing it for this many days.
+# For lists and sheets, "stopped listing" means a later successful fetch didn't include it, so a source
+# that's down doesn't close everything. CSV imports and pasted links are never closed automatically.
+expire_after_days:
+  github_list: 3
+  google_sheet: 3
+  adzuna: 30

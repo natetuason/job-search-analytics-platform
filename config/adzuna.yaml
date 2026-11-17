@@ -1,0 +1,27 @@
+# Adzuna API searches (keys come from ADZUNA_APP_ID / ADZUNA_APP_KEY in .env).
+# Every page fetched is one paid API call.
+#
+#   daily_call_cap: never send more than this many calls per day (UTC).
+#   total_call_cap: lifetime cap; set it while on the 25-call trial plan, remove it
+#                   (or raise it) after switching plans.
+#   max_pages:      pages per search (results_per_page jobs each).
+#   max_days_old:   only postings this recent.
+#   searches:       what = keywords (all must match), where = place name.
+
+daily_call_cap: 10
+total_call_cap: 20   # trial plan has 25 calls; keep a few spare
+results_per_page: 50
+max_pages: 1
+max_days_old: 14
+
+searches:
+  - { what: business analyst,     where: New Jersey }
+  - { what: business analyst,     where: New York City }
+  - { what: data analyst,         where: New Jersey }
+  - { what: data analyst,         where: New York City }
+  - { what: supply chain analyst, where: New Jersey }
+  - { what: supply chain analyst, where: New York City }
+  - { what: analyst rotational,   where: New Jersey }
+  - { what: analyst rotational,   where: New York City }
+  - { what: risk analyst,         where: New Jersey }
+  - { what: planning analyst,     where: New Jersey }

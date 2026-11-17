@@ -1,0 +1,29 @@
+[
+  {
+    "id": "aaaa-1111",
+    "text": "Strategy & Operations Analyst",
+    "hostedUrl": "https://jobs.lever.co/acme/aaaa-1111",
+    "applyUrl": "https://jobs.lever.co/acme/aaaa-1111/apply?lever-source=LinkedIn",
+    "categories": {"commitment": "Full-time", "location": "San Francisco, CA", "team": "Strategy"},
+    "workplaceType": "onsite",
+    "country": "US",
+    "createdAt": 1793000000000,
+    "descriptionPlain": "Drive strategic projects.",
+    "lists": [{"text": "Requirements", "content": "<li>2+ years of experience</li><li>SQL and Excel</li>"}],
+    "additionalPlain": "Benefits included.",
+    "salaryRange": {"min": 105000, "max": 130000, "currency": "USD", "interval": "per-year-salary"}
+  },
+  {
+    "id": "bbbb-2222",
+    "text": "Business Analyst",
+    "hostedUrl": "https://jobs.lever.co/acme/bbbb-2222",
+    "applyUrl": "https://jobs.lever.co/acme/bbbb-2222/apply",
+    "categories": {"commitment": "Internship", "location": "London"},
+    "workplaceType": "hybrid",
+    "country": "GB",
+    "createdAt": 1792000000000,
+    "descriptionPlain": "Summer role.",
+    "lists": [],
+    "salaryRange": {"min": 3000, "max": 4000, "currency": "GBP", "interval": "per-month-salary"}
+  }
+]

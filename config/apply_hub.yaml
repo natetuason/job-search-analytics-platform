@@ -1,0 +1,81 @@
+# Apply hub: places the app does NOT fetch automatically (terms, CAPTCHAs, or no public
+# API), so I visit them myself. The app only lists and opens these links.
+#
+#   searches:  turned into pre-filtered LinkedIn and Indeed search links (entry level,
+#              past week, newest first). Those sites are never contacted by the app.
+#   sites:     job sites to check by hand.
+#   employers: career sites, mostly Workday or custom portals.
+#              checked: date the link was confirmed to open; "blocked" means the site
+#              refuses automated checks (it opens fine in a browser).
+#
+# Personal links (your school's career portal, ...) go in data/private/apply_hub.yaml (git-ignored),
+# same format with `sites:` and/or `employers:`; they're listed first.
+
+searches:
+  locations: ["New York City Metropolitan Area", "New Jersey, United States"]
+  keywords:
+    - Business Analyst
+    - Data Analyst
+    - Supply Chain Analyst
+    - Demand Planning Analyst
+    - Strategy and Operations Analyst
+    - Risk Analyst
+    - Technology Analyst
+    - Associate Product Manager
+    - Rotational Program Analyst
+
+sites:
+  - { name: Handshake,                      url: "https://joinhandshake.com/", note: "Campus recruiting; use your school's Handshake link (add it in data/private/apply_hub.yaml)" }
+  - { name: Jobright,                       url: "https://jobright.ai/jobs" }
+  - { name: Simplify new grad data/AI,      url: "https://simplify.jobs/l/New-Grad-Data-Science-AI-ML", note: "Same jobs also arrive via the Simplify GitHub list" }
+  - { name: newgrad.ai product,             url: "https://newgrad.ai/jobs/fields/product" }
+  - { name: Boardsweep new grad product,    url: "https://boardsweep.io/new-grad/product" }
+  - { name: Welcome to the Jungle,          url: "https://www.welcometothejungle.com/en/get-started/jobs-preview" }
+  - { name: SWE Job Lists CSV download,     url: "https://swejoblists.com/download", note: "Download, then: python -m app.cli import-csv <file>" }
+  - { name: USAJOBS,                        url: "https://www.usajobs.gov/" }
+
+employers:
+  # Pharma / health
+  - { name: Johnson & Johnson,    url: "https://www.careers.jnj.com/en/jobs/",                           checked: blocked }
+  - { name: Pfizer,               url: "https://www.pfizer.com/about/careers",                           checked: blocked }
+  - { name: Bristol Myers Squibb, url: "https://jobs.bms.com/careers",                                   checked: 2026-11-05 }
+  - { name: Merck,                url: "https://jobs.merck.com/us/en",                                   checked: 2026-11-05 }
+  - { name: Novartis,             url: "https://www.novartis.com/careers/career-search",                 checked: 2026-11-05 }
+  - { name: BD,                   url: "https://jobs.bd.com/en",                                         checked: 2026-11-05 }
+  # Finance / insurance
+  - { name: Capital One,          url: "https://www.capitalonecareers.com/search-jobs",                  checked: 2026-11-05 }
+  - { name: Prudential,           url: "https://jobs.prudential.com/",                                   checked: 2026-11-05 }
+  - { name: JPMorgan Chase,       url: "https://www.jpmorganchase.com/careers/explore-opportunities/programs", checked: 2026-11-05 }
+  - { name: Goldman Sachs,        url: "https://www.goldmansachs.com/careers/students/programs-and-internships", checked: 2026-11-05 }
+  - { name: Morgan Stanley,       url: "https://www.morganstanley.com/people-opportunities/students-graduates", checked: 2026-11-05 }
+  - { name: BNY,                  url: "https://www.bny.com/corporate/global/en/about-us/careers/work-with-us.html", checked: 2026-11-05 }
+  - { name: Citi,                 url: "https://jobs.citi.com/",                                         checked: 2026-11-05 }
+  - { name: American Express,     url: "https://www.americanexpress.com/en-us/careers/",                 checked: 2026-11-05 }
+  - { name: Mastercard,           url: "https://careers.mastercard.com/us/en",                           checked: 2026-11-05 }
+  - { name: BlackRock,            url: "https://careers.blackrock.com/",                                 checked: 2026-11-05 }
+  - { name: Moody's,              url: "https://careers.moodys.com/en",                                  checked: 2026-11-05 }
+  - { name: S&P Global,           url: "https://careers.spglobal.com/jobs",                              checked: 2026-11-05 }
+  - { name: Bloomberg,            url: "https://www.bloomberg.com/company/careers/",                     checked: blocked }
+  - { name: MetLife,              url: "https://www.metlife.com/careers/",                               checked: blocked }
+  - { name: ADP,                  url: "https://jobs.adp.com/",                                          checked: blocked }
+  # Consumer / retail
+  - { name: Amazon,               url: "https://www.amazon.jobs/en/",                                    checked: 2026-11-05 }
+  - { name: Gap Inc.,             url: "https://www.gapinc.com/en-us/careers",                           checked: 2026-11-05 }
+  - { name: Uniqlo (Fast Retailing), url: "https://www.fastretailing.com/careers/en/",                   checked: 2026-11-05 }
+  - { name: Hartz,                url: "https://www.hartz.com/careers/",                                 checked: blocked }
+  - { name: Unilever,             url: "https://careers.unilever.com/en",                                checked: 2026-11-05 }
+  - { name: PepsiCo,              url: "https://www.pepsicojobs.com/main",                               checked: 2026-11-05 }
+  - { name: L'Oréal,              url: "https://careers.loreal.com/en",                                  checked: 2026-11-05 }
+  - { name: Estée Lauder,         url: "https://careers.elcompanies.com/careers",                        checked: 2026-11-05 }
+  - { name: Colgate-Palmolive,    url: "https://jobs.colgate.com/",                                      checked: 2026-11-05 }
+  - { name: Mars,                 url: "https://careers.mars.com/us/en",                                 checked: 2026-11-05 }
+  - { name: Campbell's,           url: "https://careers.thecampbellscompany.com/",                       checked: 2026-11-05 }
+  # Tech / telecom / consulting
+  - { name: Samsung,              url: "https://sec.wd3.myworkdayjobs.com/Samsung_Careers",              checked: 2026-11-05 }
+  - { name: Verizon,              url: "https://mycareer.verizon.com/",                                  checked: blocked }
+  - { name: Cognizant,            url: "https://careers.cognizant.com/us/en",                            checked: blocked }
+  - { name: Accenture,            url: "https://www.accenture.com/us-en/careers",                        checked: 2026-11-05 }
+  - { name: Deloitte,             url: "https://apply.deloitte.com/en_US/careers",                       checked: 2026-11-05 }
+  - { name: PwC,                  url: "https://www.pwc.com/us/en/careers.html",                         checked: 2026-11-05 }
+  - { name: EY,                   url: "https://careers.ey.com/",                                        checked: 2026-11-05 }
+  - { name: KPMG,                 url: "https://www.kpmguscareers.com/",                                 checked: 2026-11-05 }
